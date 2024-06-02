@@ -33,6 +33,7 @@ app.post('/house', async (req, res) => {
   res.status(201).send(newHouse);
 });
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
